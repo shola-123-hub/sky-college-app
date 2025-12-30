@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky College Academy | Official App</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="logo.png">
+    <meta name="theme-color" content="#003366">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Sky College Logo" class="nav-logo">
+            <span class="logo-text">SKY COLLEGE</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" class="btn-portal">Portal</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <img src="logo.png" alt="Sky College" class="hero-logo">
+            <h1>Reach for the Stars</h1>
+            <p>Molding the leaders of tomorrow with excellence.</p>
+            <a href="#contact" class="cta-button">Enroll Now</a>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Sky College</h2>
+        <p>Sky College is a premier academy focused on academic brilliance and character development. Our mission is to provide a world-class education that empowers every child to reach their full potential.</p>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-envelope"></i> info@skycollege.edu.ng</p>
+                <p><i class="fas fa-phone"></i> +234 801 234 5678</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Student Name" required>
+                <input type="email" placeholder="Parent Email" required>
+                <textarea placeholder="Inquiry Details" rows="4"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sky College | Built for Excellence</p>
+    </footer>
+
+    <script>
+      /* Registers the Service Worker to allow 'Install to Home Screen' */
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.worker.register('/sw.js').catch(err => console.log('Service Worker failed', err));
+        });
+      }
+    </script>
+</body>
+</html>
